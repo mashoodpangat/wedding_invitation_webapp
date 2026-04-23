@@ -50,12 +50,18 @@
         body::before {
             content: '';
             position: fixed;
-            inset: 0;
+            inset: -50%;
             z-index: 0;
             pointer-events: none;
-            opacity: 0.025;
+            opacity: 0.035;
             background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='0.5'%3E%3Cpath d='M40 0 L80 40 L40 80 L0 40Z'/%3E%3Cpath d='M40 10 L70 40 L40 70 L10 40Z'/%3E%3Cpath d='M40 20 L60 40 L40 60 L20 40Z'/%3E%3Ccircle cx='40' cy='40' r='15'/%3E%3Ccircle cx='40' cy='40' r='8'/%3E%3Cline x1='40' y1='0' x2='40' y2='80'/%3E%3Cline x1='0' y1='40' x2='80' y2='40'/%3E%3C/g%3E%3C/svg%3E");
             background-size: 80px 80px;
+            animation: bgRotate 120s linear infinite;
+        }
+
+        @keyframes bgRotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         /* === ARABESQUE CORNER DECORATIONS === */
@@ -670,38 +676,46 @@
             letter-spacing: 2px;
         }
 
-        /* === ANIMATIONS === */
+        /* === MODERN REVEALS === */
         .reveal {
             opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 1s cubic-bezier(.25, .46, .45, .94), transform 1s cubic-bezier(.25, .46, .45, .94);
+            transform: translateY(40px) scale(0.95);
+            filter: blur(10px);
+            transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), 
+                        transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+                        filter 1.2s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
         .reveal.visible {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0) scale(1);
+            filter: blur(0);
         }
 
         .reveal-left {
             opacity: 0;
-            transform: translateX(-60px);
-            transition: opacity 1s ease, transform 1s ease;
+            transform: translateX(-50px) scale(0.95);
+            filter: blur(10px);
+            transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
         .reveal-left.visible {
             opacity: 1;
-            transform: translateX(0);
+            transform: translateX(0) scale(1);
+            filter: blur(0);
         }
 
         .reveal-right {
             opacity: 0;
-            transform: translateX(60px);
-            transition: opacity 1s ease, transform 1s ease;
+            transform: translateX(50px) scale(0.95);
+            filter: blur(10px);
+            transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
         .reveal-right.visible {
             opacity: 1;
-            transform: translateX(0);
+            transform: translateX(0) scale(1);
+            filter: blur(0);
         }
 
         .d1 {
@@ -733,10 +747,16 @@
             position: fixed;
             pointer-events: none;
             z-index: 0;
-            opacity: .07;
+            opacity: 0.15;
             font-size: 4rem;
-            animation: floatAround 20s ease-in-out infinite;
+            animation: floatAround 20s ease-in-out infinite, pulseGlow 4s ease-in-out infinite;
             color: var(--accent);
+            filter: drop-shadow(0 0 10px rgba(184, 149, 42, 0.2));
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.1; filter: drop-shadow(0 0 5px rgba(184, 149, 42, 0.1)); }
+            50% { opacity: 0.3; filter: drop-shadow(0 0 20px rgba(184, 149, 42, 0.4)); }
         }
 
         .float-decor:nth-child(1) {
@@ -1437,8 +1457,7 @@
             update() {
                 this.y += this.speedY;
                 this.x += this.speedX;
-                this.opacity -= 0.001;
-                if (this.y < 0 || this.opacity <= 0) { this.reset(); this.y = canvas.height + 10; this.opacity = Math.random() * 0.5 + 0.1; }
+                if (this.y < 0) { this.reset(); this.y = canvas.height + 10; }
             }
             draw() {
                 ctx.beginPath();
@@ -1449,10 +1468,32 @@
                 ctx.fill();
             }
         }
-        for (let i = 0; i < 120; i++) particles.push(new Particle());
+
+        for (let i = 0; i < 100; i++) particles.push(new Particle());
+
+        function drawLines() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < 100) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(184,149,42,${0.15 * (1 - distance / 100)})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
         function animateParticles() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             particles.forEach(p => { p.update(); p.draw(); });
+            drawLines();
             requestAnimationFrame(animateParticles);
         }
         animateParticles();
