@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding of Ameer Shuhail & Ramsheena</title>
+    <meta name="description"
+        content="You are cordially invited to celebrate the wedding of Ameer Shuhail & Ramsheena on May 11, 2026 at Pathari Auditorium, Angadippuram.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #064E3B;
+            --primary-light: #0a7a5e;
+            --accent: #B8952A;
+            --accent-light: #d4af37;
+            --bg: #FAFAF8;
+            --bg-card: rgba(0, 0, 0, 0.03);
+            --text: #2c2c2c;
+            --text-muted: #6b7280;
+            --gold-glow: rgba(184, 149, 42, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--bg);
+            background-image:
+                radial-gradient(ellipse at 20% 50%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(6, 78, 59, 0.05) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(212, 175, 55, 0.02) 0%, transparent 50%);
+            color: var(--text);
+            text-align: center;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* === ISLAMIC GEOMETRIC PATTERN OVERLAY === */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.025;
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='0.5'%3E%3Cpath d='M40 0 L80 40 L40 80 L0 40Z'/%3E%3Cpath d='M40 10 L70 40 L40 70 L10 40Z'/%3E%3Cpath d='M40 20 L60 40 L40 60 L20 40Z'/%3E%3Ccircle cx='40' cy='40' r='15'/%3E%3Ccircle cx='40' cy='40' r='8'/%3E%3Cline x1='40' y1='0' x2='40' y2='80'/%3E%3Cline x1='0' y1='40' x2='80' y2='40'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 80px 80px;
+        }
+
+        /* === ARABESQUE CORNER DECORATIONS === */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            pointer-events: none;
+            background:
+                radial-gradient(circle at 0% 0%, rgba(212, 175, 55, 0.06) 0%, transparent 25%),
+                radial-gradient(circle at 100% 0%, rgba(212, 175, 55, 0.06) 0%, transparent 25%),
+                radial-gradient(circle at 0% 100%, rgba(212, 175, 55, 0.04) 0%, transparent 25%),
+                radial-gradient(circle at 100% 100%, rgba(212, 175, 55, 0.04) 0%, transparent 25%);
+        }
+
+        h1,
+        h2,
+        h3,
+        .bismillah {
+            font-family: 'Amiri', serif;
+        }
+
+        /* === PARTICLE CANVAS === */
+        #particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* === HERO === */
+        .hero {
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 20px;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(212, 175, 55, 0.04) 40%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: heroGlow 6s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='0.3' opacity='0.15'%3E%3Ccircle cx='100' cy='100' r='90'/%3E%3Ccircle cx='100' cy='100' r='70'/%3E%3Ccircle cx='100' cy='100' r='50'/%3E%3Cpath d='M100 10 L100 190 M10 100 L190 100'/%3E%3Cpath d='M100 10 L163.6 50 L163.6 150 L100 190 L36.4 150 L36.4 50Z'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 200px 200px;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.4;
+        }
+
+        @keyframes heroGlow {
+
+            0%,
+            100% {
+                opacity: .4;
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            50% {
+                opacity: .7;
+                transform: translate(-50%, -50%) scale(1.15);
+            }
+        }
+
+        .ornament {
+            width: 120px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            margin: 10px auto;
+            position: relative;
+        }
+
+        .ornament::before {
+            content: '✦';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--accent);
+            font-size: .8rem;
+            background: var(--bg);
+            padding: 0 12px;
+        }
+
+        .bismillah {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 4px;
+            animation: shimmer 4s ease-in-out infinite;
+        }
+
+        .bismillah-eng {
+            font-family: 'Montserrat', sans-serif;
+            font-size: .7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        @keyframes shimmer {
+
+            0%,
+            100% {
+                text-shadow: 0 0 20px rgba(212, 175, 55, .2);
+            }
+
+            50% {
+                text-shadow: 0 0 40px rgba(212, 175, 55, .5), 0 0 80px rgba(212, 175, 55, .15);
+            }
+        }
+
+        .hero .subtitle {
+            font-size: .85rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-top: 10px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5.5rem;
+            font-weight: 700;
+            margin: 10px 0;
+            line-height: 1.1;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 50%, var(--primary) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textShine 5s linear infinite;
+        }
+
+        @keyframes textShine {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        .hero .ampersand {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 3rem;
+            color: var(--accent);
+            display: block;
+            margin: -5px 0;
+            -webkit-text-fill-color: var(--accent);
+        }
+
+        /* === FAMILY INVITATION SECTION === */
+        .invitation-section {
+            position: relative;
+            z-index: 1;
+            padding: 10px 20px 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .family-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(212, 175, 55, .12);
+            border-radius: 20px;
+            padding: 30px 25px;
+            backdrop-filter: blur(12px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .family-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 0%, var(--gold-glow) 0%, transparent 60%);
+            opacity: 0.5;
+        }
+
+        .family-card>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .family-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .family-side {
+            text-align: center;
+        }
+
+        .family-side .label {
+            font-size: .65rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .family-side .parents {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .family-side .address {
+            font-size: .82rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .family-divider {
+            width: 1px;
+            height: 80px;
+            background: linear-gradient(to bottom, transparent, var(--accent-light), transparent);
+            position: relative;
+        }
+
+        .family-divider::before {
+            content: '✦';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--accent);
+            font-size: .65rem;
+            background: transparent;
+        }
+
+        .invite-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: .88rem;
+            color: var(--text);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .invite-text strong {
+            color: var(--primary);
+        }
+
+        /* === QUOTE SECTION === */
+        .quote-section {
+            position: relative;
+            z-index: 1;
+            padding: 15px 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .quote-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(212, 175, 55, .12);
+            border-radius: 20px;
+            padding: 30px 25px;
+            backdrop-filter: blur(12px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quote-card::before {
+            content: '\201C';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: 8rem;
+            color: rgba(212, 175, 55, .08);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .quote-card .arabic-verse {
+            font-family: 'Amiri', serif;
+            font-size: 1.6rem;
+            color: var(--accent);
+            line-height: 2;
+            margin-bottom: 18px;
+            direction: rtl;
+        }
+
+        .quote-card .translation {
+            font-style: italic;
+            color: var(--text);
+            font-size: .95rem;
+            line-height: 1.8;
+            margin-bottom: 14px;
+        }
+
+        .quote-card .reference {
+            font-size: .75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        /* === COUNTDOWN === */
+        .countdown-section {
+            position: relative;
+            z-index: 1;
+            padding: 25px 20px 10px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .countdown-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: var(--bg-card);
+            border: 1px solid rgba(212, 175, 55, .12);
+            border-radius: 16px;
+            padding: 18px 22px;
+            min-width: 90px;
+            backdrop-filter: blur(12px);
+            transition: transform .3s, border-color .3s;
+        }
+
+        .countdown-item:hover {
+            transform: translateY(-4px);
+            border-color: rgba(212, 175, 55, .3);
+        }
+
+        .countdown-item .number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .countdown-item .label {
+            font-size: .65rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* === EVENT CARDS === */
+        .events-section {
+            position: relative;
+            z-index: 1;
+            padding: 20px 20px 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: .8rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 18px;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+        }
+
+        .event-card {
+            position: relative;
+            background: var(--bg-card);
+            border: 1px solid rgba(212, 175, 55, .1);
+            border-radius: 20px;
+            padding: 28px 25px 24px;
+            backdrop-filter: blur(12px);
+            overflow: hidden;
+            transition: transform .5s cubic-bezier(.175, .885, .32, 1.275), border-color .4s, box-shadow .4s;
+        }
+
+        .event-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            opacity: 0;
+            transition: opacity .4s;
+        }
+
+        .event-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 0%, var(--gold-glow) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity .4s;
+        }
+
+        .event-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, .3);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, .1), 0 0 40px var(--gold-glow);
+        }
+
+        .event-card:hover::before,
+        .event-card:hover::after {
+            opacity: 1;
+        }
+
+        .event-card>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .event-icon {
+            margin-bottom: 15px;
+            line-height: 1;
+        }
+
+        /* === REALISTIC WEDDING RINGS === */
+        .rings-icon {
+            display: inline-block;
+            animation: ringFloat 3s ease-in-out infinite;
+            filter: drop-shadow(0 8px 24px rgba(184, 149, 42, 0.3));
+        }
+
+        .rings-icon svg {
+            width: 160px;
+            height: 100px;
+            display: block;
+        }
+
+        @keyframes ringFloat {
+            0%, 100% {
+                transform: translateY(0);
+                filter: drop-shadow(0 8px 24px rgba(184, 149, 42, 0.3));
+            }
+            50% {
+                transform: translateY(-8px);
+                filter: drop-shadow(0 14px 32px rgba(184, 149, 42, 0.45)) drop-shadow(0 0 20px rgba(212, 175, 55, 0.15));
+            }
+        }
+
+        .event-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .event-card .date {
+            color: var(--accent);
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: 1.5px;
+            margin-bottom: 6px;
+        }
+
+        .event-card .hijri-date {
+            font-family: 'Amiri', serif;
+            color: var(--text-muted);
+            font-size: .9rem;
+            margin-bottom: 18px;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, .3), transparent);
+            margin: 22px 0;
+        }
+
+        .event-card .detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            text-align: left;
+            margin: 14px 0;
+            font-size: .92rem;
+            color: var(--text-muted);
+        }
+
+        .event-card .detail .icon {
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .map-link {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 12px 28px;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: .9rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border: 1px solid rgba(212, 175, 55, .25);
+            border-radius: 50px;
+            transition: all .3s ease;
+        }
+
+        .map-link:hover {
+            background: rgba(212, 175, 55, .1);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, .15);
+        }
+
+        /* === INSHA ALLAH BANNER === */
+        .inshallah-section {
+            position: relative;
+            z-index: 1;
+            padding: 20px 20px;
+        }
+
+        .inshallah-text {
+            font-family: 'Amiri', serif;
+            font-size: 2.4rem;
+            color: var(--accent);
+            animation: shimmer 4s ease-in-out infinite;
+        }
+
+        /* === RSVP === */
+        .rsvp-section {
+            position: relative;
+            z-index: 1;
+            padding: 25px 20px 35px;
+        }
+
+        .rsvp-section .dua {
+            font-style: italic;
+            color: var(--text-muted);
+            max-width: 500px;
+            margin: 0 auto 35px;
+            font-size: .95rem;
+            line-height: 1.8;
+        }
+
+        .rsvp-btn {
+            display: inline-block;
+            padding: 18px 55px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: .85rem;
+            font-weight: 500;
+            border-radius: 60px;
+            position: relative;
+            overflow: hidden;
+            transition: transform .3s, box-shadow .3s;
+            box-shadow: 0 10px 30px rgba(6, 78, 59, .3);
+        }
+
+        .rsvp-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .15), transparent);
+            transition: left .6s;
+        }
+
+        .rsvp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(6, 78, 59, .4), 0 0 20px var(--gold-glow);
+        }
+
+        .rsvp-btn:hover::before {
+            left: 100%;
+        }
+
+        /* === FOOTER === */
+        footer {
+            position: relative;
+            z-index: 1;
+            padding: 18px 20px;
+            border-top: 1px solid rgba(212, 175, 55, .1);
+            color: var(--text-muted);
+            font-size: .75rem;
+            letter-spacing: 2px;
+        }
+
+        /* === ANIMATIONS === */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s cubic-bezier(.25, .46, .45, .94), transform 1s cubic-bezier(.25, .46, .45, .94);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .reveal-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .reveal-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .d1 {
+            transition-delay: .1s;
+        }
+
+        .d2 {
+            transition-delay: .25s;
+        }
+
+        .d3 {
+            transition-delay: .4s;
+        }
+
+        .d4 {
+            transition-delay: .55s;
+        }
+
+        .d5 {
+            transition-delay: .7s;
+        }
+
+        .d6 {
+            transition-delay: .85s;
+        }
+
+        /* === FLOATING DECORATIONS === */
+        .float-decor {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+            opacity: .07;
+            font-size: 4rem;
+            animation: floatAround 20s ease-in-out infinite;
+            color: var(--accent);
+        }
+
+        .float-decor:nth-child(1) {
+            top: 15%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .float-decor:nth-child(2) {
+            top: 60%;
+            right: 8%;
+            animation-delay: -7s;
+            font-size: 3rem;
+        }
+
+        .float-decor:nth-child(3) {
+            bottom: 20%;
+            left: 10%;
+            animation-delay: -14s;
+            font-size: 2.5rem;
+        }
+
+        .float-decor:nth-child(4) {
+            top: 35%;
+            right: 4%;
+            animation-delay: -3s;
+            font-size: 2rem;
+        }
+
+        .float-decor:nth-child(5) {
+            bottom: 40%;
+            left: 3%;
+            animation-delay: -10s;
+            font-size: 1.8rem;
+        }
+
+        @keyframes floatAround {
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            25% {
+                transform: translate(15px, -20px) rotate(5deg);
+            }
+
+            50% {
+                transform: translate(-10px, 15px) rotate(-3deg);
+            }
+
+            75% {
+                transform: translate(20px, 10px) rotate(4deg);
+            }
+        }
+
+        /* === SIDE ARABESQUE BORDERS === */
+        .arabesque-left,
+        .arabesque-right {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 60px;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='120' viewBox='0 0 60 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='0.8'%3E%3Cellipse cx='30' cy='60' rx='25' ry='50'/%3E%3Cellipse cx='30' cy='60' rx='15' ry='35'/%3E%3Cpath d='M30 10 Q50 60 30 110 Q10 60 30 10Z'/%3E%3Ccircle cx='30' cy='30' r='5'/%3E%3Ccircle cx='30' cy='90' r='5'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 60px 120px;
+            background-repeat: repeat-y;
+        }
+
+        .arabesque-left {
+            left: 0;
+        }
+
+        .arabesque-right {
+            right: 0;
+            transform: scaleX(-1);
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: clamp(2.2rem, 8vw, 5.5rem);
+            }
+
+            .hero .ampersand {
+                font-size: clamp(1.5rem, 4vw, 3rem);
+            }
+
+            .events-section {
+                padding: 25px 15px 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 75vh;
+                padding: 30px 15px;
+            }
+
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+
+            .hero .ampersand {
+                font-size: 1.8rem;
+            }
+
+            .hero .subtitle {
+                font-size: .75rem;
+                letter-spacing: 3px;
+            }
+
+            .bismillah {
+                font-size: 1.6rem;
+            }
+
+            .ornament {
+                width: 80px;
+            }
+
+            .hero::before {
+                width: 400px;
+                height: 400px;
+            }
+
+            .family-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .family-divider {
+                width: 80px;
+                height: 1px;
+                background: linear-gradient(90deg, transparent, var(--accent-light), transparent);
+                margin: 0 auto;
+            }
+
+            .family-divider::before {
+                display: none;
+            }
+
+            .quote-section {
+                padding: 30px 15px;
+            }
+
+            .quote-card {
+                padding: 30px 22px;
+            }
+
+            .quote-card .arabic-verse {
+                font-size: 1.3rem;
+            }
+
+            .quote-card .translation {
+                font-size: .85rem;
+            }
+
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .event-card {
+                padding: 28px 22px 25px;
+            }
+
+            .event-card h2 {
+                font-size: 1.8rem;
+            }
+
+            .map-link {
+                padding: 10px 22px;
+                font-size: .82rem;
+            }
+
+            .rsvp-section {
+                padding: 30px 15px 40px;
+            }
+
+            .rsvp-section .dua {
+                font-size: .85rem;
+            }
+
+            .arabesque-left,
+            .arabesque-right {
+                width: 30px;
+                opacity: 0.02;
+            }
+
+            footer {
+                padding: 20px 15px;
+                font-size: .65rem;
+            }
+
+            .countdown-item .number {
+                font-size: 1.8rem;
+            }
+
+            .countdown-item {
+                min-width: 70px;
+                padding: 14px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                min-height: auto;
+                padding: 60px 12px 20px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+                word-break: keep-all;
+            }
+
+            .hero .ampersand {
+                font-size: 1.4rem;
+                margin: -2px 0;
+            }
+
+            .hero .subtitle {
+                font-size: .65rem;
+                letter-spacing: 2px;
+            }
+
+            .bismillah {
+                font-size: 1.3rem;
+            }
+
+            .ornament {
+                width: 60px;
+                margin: 6px auto;
+            }
+
+            .invitation-section {
+                padding: 10px 10px 20px;
+            }
+
+            .family-card {
+                padding: 24px 16px;
+                border-radius: 14px;
+            }
+
+            .family-side .parents {
+                font-size: 1rem;
+            }
+
+            .family-side .address {
+                font-size: .75rem;
+            }
+
+            .quote-section {
+                padding: 20px 10px;
+            }
+
+            .quote-card {
+                padding: 24px 16px;
+                border-radius: 14px;
+            }
+
+            .quote-card::before {
+                font-size: 5rem;
+                top: -5px;
+                left: 10px;
+            }
+
+            .quote-card .arabic-verse {
+                font-size: 1.1rem;
+                line-height: 1.8;
+            }
+
+            .quote-card .translation {
+                font-size: .8rem;
+                line-height: 1.6;
+            }
+
+            .events-section {
+                padding: 20px 10px 30px;
+            }
+
+            .section-title {
+                font-size: .7rem;
+                letter-spacing: 3px;
+                margin-bottom: 18px;
+            }
+
+            .event-card {
+                padding: 22px 16px 20px;
+                border-radius: 14px;
+            }
+
+            .event-card h2 {
+                font-size: 1.5rem;
+            }
+
+            .event-card .date {
+                font-size: .85rem;
+            }
+
+            .event-icon {
+                margin-bottom: 10px;
+            }
+
+            .event-card .detail {
+                font-size: .82rem;
+                gap: 8px;
+                margin: 10px 0;
+            }
+
+            .divider {
+                margin: 16px 0;
+            }
+
+            .map-link {
+                padding: 10px 18px;
+                font-size: .78rem;
+            }
+
+            .rsvp-section {
+                padding: 25px 12px 35px;
+            }
+
+            .arabesque-left,
+            .arabesque-right {
+                display: none;
+            }
+
+            .float-decor {
+                font-size: 2rem !important;
+                opacity: .04 !important;
+            }
+
+            .countdown-grid {
+                gap: 12px;
+            }
+
+            .countdown-item {
+                min-width: 62px;
+                padding: 12px 12px;
+            }
+
+            .countdown-item .number {
+                font-size: 1.5rem;
+            }
+
+            .countdown-item .label {
+                font-size: .55rem;
+            }
+
+            .inshallah-text {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero .ampersand {
+                font-size: 1.2rem;
+            }
+
+            .bismillah {
+                font-size: 1.1rem;
+            }
+
+            .hero .subtitle {
+                font-size: .6rem;
+                letter-spacing: 1.5px;
+            }
+
+            .quote-card .arabic-verse {
+                font-size: 1rem;
+            }
+
+            .event-card h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Floating Islamic decorations -->
+    <div class="float-decor">✦</div>
+    <div class="float-decor">۞</div>
+    <div class="float-decor">✧</div>
+    <div class="float-decor">❂</div>
+    <div class="float-decor">✦</div>
+
+    <!-- Arabesque side borders -->
+    <div class="arabesque-left"></div>
+    <div class="arabesque-right"></div>
+
+    <!-- Particle canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- HERO -->
+    <header class="hero" id="hero">
+        <div class="bismillah reveal d1">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</div>
+        <p class="bismillah-eng reveal d2">In the name of Allah, the Most Beneficent, the Most Merciful</p>
+        <div class="ornament reveal d2"></div>
+        <p class="subtitle reveal d3">You are invited to the wedding of</p>
+        <h1 class="reveal d4">Ameer Shuhail<span class="ampersand">&</span>Ramsheena</h1>
+        <div class="ornament reveal d5"></div>
+    </header>
+
+    <!-- FAMILY INVITATION -->
+    <section class="invitation-section">
+        <div class="family-card reveal d1">
+            <p class="invite-text">
+                Wholeheartedly invite you to share in our joy and request your<br>
+                presence & blessings at the wedding ceremony of our beloved ones
+            </p>
+            <div class="family-grid">
+                <!-- Groom's Family -->
+                <div class="family-side reveal-left d2">
+                    <p class="label">Groom's Family</p>
+                    <p class="parents">Mr. Abdurahiman<br>& Mrs. Jameela</p>
+                    <p class="address">
+                        Ambalathu Veed<br>
+                        Thekkinkode, Perintalmanna<br>
+                        ✆ 9747660484
+                    </p>
+                </div>
+
+                <div class="family-divider"></div>
+
+                <!-- Bride's Family -->
+                <div class="family-side reveal-right d2">
+                    <p class="label">Bride's Family</p>
+                    <p class="parents">Mr. Rasheed<br>& Mrs. Jaseena</p>
+                    <p class="address">
+                        Thayyil House<br>
+                        Pooppalam, Valamboor
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- INSHA ALLAH -->
+    <section class="inshallah-section">
+        <p class="inshallah-text reveal">إن شاء الله</p>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="countdown-section">
+        <p class="section-title reveal">✦ &nbsp; Counting Down &nbsp; ✦</p>
+        <div class="countdown-grid reveal d2" id="countdown">
+            <div class="countdown-item">
+                <div class="number" id="days">--</div>
+                <div class="label">Days</div>
+            </div>
+            <div class="countdown-item">
+                <div class="number" id="hours">--</div>
+                <div class="label">Hours</div>
+            </div>
+            <div class="countdown-item">
+                <div class="number" id="minutes">--</div>
+                <div class="label">Minutes</div>
+            </div>
+            <div class="countdown-item">
+                <div class="number" id="seconds">--</div>
+                <div class="label">Seconds</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section class="events-section">
+        <p class="section-title reveal">✦ &nbsp; Ceremony Details &nbsp; ✦</p>
+        <div class="events-grid" style="max-width:700px; margin:0 auto;">
+
+            <div class="event-card reveal d2">
+                <div class="event-icon">
+                    <div class="rings-icon">
+                        <svg viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <!-- Gold metallic gradient for left ring -->
+                                <linearGradient id="goldRing1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#f7e58d"/>
+                                    <stop offset="20%" stop-color="#d4a825"/>
+                                    <stop offset="40%" stop-color="#f5d76e"/>
+                                    <stop offset="55%" stop-color="#c8941e"/>
+                                    <stop offset="75%" stop-color="#e8c84a"/>
+                                    <stop offset="100%" stop-color="#a67c14"/>
+                                </linearGradient>
+                                <!-- Gold metallic gradient for right ring -->
+                                <linearGradient id="goldRing2" x1="100%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#f0dc78"/>
+                                    <stop offset="25%" stop-color="#c9991c"/>
+                                    <stop offset="50%" stop-color="#f2ce5b"/>
+                                    <stop offset="70%" stop-color="#b8860b"/>
+                                    <stop offset="100%" stop-color="#dbb740"/>
+                                </linearGradient>
+                                <!-- Inner shadow gradient -->
+                                <radialGradient id="innerShadow" cx="50%" cy="50%" r="50%">
+                                    <stop offset="60%" stop-color="transparent"/>
+                                    <stop offset="100%" stop-color="rgba(120,80,10,0.15)"/>
+                                </radialGradient>
+                                <!-- Specular highlight -->
+                                <linearGradient id="shine1" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="rgba(255,255,255,0.7)"/>
+                                    <stop offset="30%" stop-color="rgba(255,255,255,0.15)"/>
+                                    <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+                                </linearGradient>
+                                <linearGradient id="shine2" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="rgba(255,255,255,0.6)"/>
+                                    <stop offset="35%" stop-color="rgba(255,255,255,0.1)"/>
+                                    <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+                                </linearGradient>
+                                <!-- Diamond facet gradient -->
+                                <linearGradient id="diamondFace" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ffffff"/>
+                                    <stop offset="30%" stop-color="#e8f4fd"/>
+                                    <stop offset="60%" stop-color="#cce5f5"/>
+                                    <stop offset="100%" stop-color="#a8d5ea"/>
+                                </linearGradient>
+                                <linearGradient id="diamondSide" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#d4e8f2"/>
+                                    <stop offset="100%" stop-color="#8cbbd4"/>
+                                </linearGradient>
+                                <!-- Diamond sparkle filter -->
+                                <filter id="diamondGlow" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feGaussianBlur stdDeviation="1.5" result="glow"/>
+                                    <feMerge>
+                                        <feMergeNode in="glow"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+
+                            <!-- Shadow under rings -->
+                            <ellipse cx="70" cy="78" rx="42" ry="5" fill="rgba(0,0,0,0.06)"/>
+
+                            <!-- === LEFT RING (back part behind overlap) === -->
+                            <!-- Left ring - full back -->
+                            <ellipse cx="50" cy="45" rx="24" ry="24" fill="none" stroke="url(#goldRing1)" stroke-width="7"/>
+                            <!-- Left ring inner edge -->
+                            <ellipse cx="50" cy="45" rx="20.5" ry="20.5" fill="none" stroke="rgba(160,120,20,0.2)" stroke-width="0.5"/>
+                            <!-- Left ring outer edge -->
+                            <ellipse cx="50" cy="45" rx="27" ry="27" fill="none" stroke="rgba(200,170,50,0.15)" stroke-width="0.3"/>
+                            <!-- Left ring shine highlight -->
+                            <path d="M 32 30 A 24 24 0 0 1 68 30" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="3" stroke-linecap="round"/>
+                            <!-- Left ring bottom shadow -->
+                            <path d="M 32 60 A 24 24 0 0 1 68 60" fill="none" stroke="rgba(120,80,10,0.2)" stroke-width="3" stroke-linecap="round"/>
+                            <!-- Left ring engraved line detail -->
+                            <ellipse cx="50" cy="45" rx="24" ry="24" fill="none" stroke="rgba(180,140,30,0.3)" stroke-width="0.4" stroke-dasharray="2,4"/>
+
+                            <!-- === RIGHT RING === -->
+                            <!-- Right ring - full -->
+                            <ellipse cx="88" cy="45" rx="24" ry="24" fill="none" stroke="url(#goldRing2)" stroke-width="7"/>
+                            <!-- Right ring inner edge -->
+                            <ellipse cx="88" cy="45" rx="20.5" ry="20.5" fill="none" stroke="rgba(160,120,20,0.2)" stroke-width="0.5"/>
+                            <!-- Right ring outer edge -->
+                            <ellipse cx="88" cy="45" rx="27" ry="27" fill="none" stroke="rgba(200,170,50,0.15)" stroke-width="0.3"/>
+                            <!-- Right ring shine highlight -->
+                            <path d="M 70 30 A 24 24 0 0 1 106 30" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="3" stroke-linecap="round"/>
+                            <!-- Right ring bottom shadow -->
+                            <path d="M 70 60 A 24 24 0 0 1 106 60" fill="none" stroke="rgba(120,80,10,0.18)" stroke-width="3" stroke-linecap="round"/>
+                            <!-- Right ring engraved line -->
+                            <ellipse cx="88" cy="45" rx="24" ry="24" fill="none" stroke="rgba(180,140,30,0.25)" stroke-width="0.4" stroke-dasharray="2,4"/>
+
+                            <!-- === OVERLAP COVER (front part of left ring over right) === -->
+                            <path d="M 68 30 A 24 24 0 0 1 68 60" fill="none" stroke="url(#goldRing1)" stroke-width="7"/>
+                            <path d="M 68 30 A 24 24 0 0 1 68 36" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2.5"/>
+
+                            <!-- === DIAMOND ON LEFT RING === -->
+                            <g filter="url(#diamondGlow)" transform="translate(50, 18)">
+                                <!-- Diamond base/pavilion -->
+                                <polygon points="0,-4 5,3 -5,3" fill="url(#diamondSide)" opacity="0.9"/>
+                                <!-- Diamond crown top facets -->
+                                <polygon points="0,-8 4,-4 0,-2 -4,-4" fill="url(#diamondFace)"/>
+                                <!-- Diamond left facet -->
+                                <polygon points="-4,-4 0,-2 -5,3" fill="#b8d8e8" opacity="0.7"/>
+                                <!-- Diamond right facet -->
+                                <polygon points="4,-4 0,-2 5,3" fill="#d0eaf5" opacity="0.8"/>
+                                <!-- Diamond crown top highlight -->
+                                <polygon points="0,-8 2,-5 0,-3 -2,-5" fill="rgba(255,255,255,0.8)"/>
+                                <!-- Prong/setting details -->
+                                <rect x="-5.5" y="2" width="2" height="3" rx="0.5" fill="#c8941e" opacity="0.7"/>
+                                <rect x="3.5" y="2" width="2" height="3" rx="0.5" fill="#c8941e" opacity="0.7"/>
+                            </g>
+
+                            <!-- === SPARKLES === -->
+                            <g opacity="0.9">
+                                <polygon points="42,8 42.8,10 45,10 43.2,11.5 43.8,14 42,12.5 40.2,14 40.8,11.5 39,10 41.2,10" fill="#fff" opacity="0">
+                                    <animate attributeName="opacity" values="0;0.9;0" dur="2.5s" repeatCount="indefinite" begin="0.5s"/>
+                                    <animateTransform attributeName="transform" type="scale" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite" begin="0.5s" additive="sum"/>
+                                </polygon>
+                                <polygon points="60,6 60.6,7.5 62,7.5 60.8,8.5 61.2,10 60,9 58.8,10 59.2,8.5 58,7.5 59.4,7.5" fill="#fff" opacity="0">
+                                    <animate attributeName="opacity" values="0;0.8;0" dur="2s" repeatCount="indefinite" begin="1.2s"/>
+                                    <animateTransform attributeName="transform" type="scale" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" begin="1.2s" additive="sum"/>
+                                </polygon>
+                                <circle cx="47" cy="12" r="1" fill="#fff" opacity="0">
+                                    <animate attributeName="opacity" values="0;0.7;0" dur="1.8s" repeatCount="indefinite" begin="0.8s"/>
+                                </circle>
+                                <circle cx="55" cy="10" r="0.7" fill="#fff" opacity="0">
+                                    <animate attributeName="opacity" values="0;0.6;0" dur="2.2s" repeatCount="indefinite" begin="1.8s"/>
+                                </circle>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <h2>Wedding Day</h2>
+                <p class="date">Monday, May 11, 2026</p>
+                <p class="hijri-date">23 Dhul Qa'dah 1447 H</p>
+                <div class="divider"></div>
+                <div class="detail">
+                    <span class="icon">🕐</span>
+                    <span>11:00 AM onwards</span>
+                </div>
+                <div class="detail">
+                    <span class="icon">📍</span>
+                    <span>Pathari Auditorium<br>Angadippuram, Malappuram<br>Kerala, India</span>
+                </div>
+                <div class="divider"></div>
+                <a href="https://maps.google.com/?q=Pathari+Auditorium+Angadippuram+Malappuram+Kerala" target="_blank"
+                    rel="noopener" class="map-link">
+                    📌 Pathari Auditorium, Angadippuram
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="rsvp-section">
+        <p class="section-title reveal">✦ &nbsp; Join Us &nbsp; ✦</p>
+        <p class="dua reveal d1">"Your presence is our greatest gift.<br>Please keep us in your Duas."</p>
+    </section>
+
+    <footer>
+        <p class="reveal">Ameer Shuhail & Ramsheena · May 2026</p>
+    </footer>
+
+    <script>
+        /* ===== Intersection Observer for scroll reveals ===== */
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => io.observe(el));
+
+        /* ===== Countdown Timer ===== */
+        const weddingDate = new Date('2026-05-11T11:00:00+05:30').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const diff = weddingDate - now;
+
+            if (diff <= 0) {
+                document.getElementById('days').textContent = '0';
+                document.getElementById('hours').textContent = '0';
+                document.getElementById('minutes').textContent = '0';
+                document.getElementById('seconds').textContent = '0';
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        /* ===== Particle System ===== */
+        const canvas = document.getElementById('particles');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        function resize() { canvas.width = innerWidth; canvas.height = innerHeight; }
+        resize();
+        addEventListener('resize', resize);
+
+        class Particle {
+            constructor() { this.reset(); }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedY = -(Math.random() * 0.3 + 0.1);
+                this.speedX = (Math.random() - 0.5) * 0.2;
+                this.opacity = Math.random() * 0.5 + 0.1;
+                this.gold = Math.random() > 0.6;
+            }
+            update() {
+                this.y += this.speedY;
+                this.x += this.speedX;
+                this.opacity -= 0.001;
+                if (this.y < 0 || this.opacity <= 0) { this.reset(); this.y = canvas.height + 10; this.opacity = Math.random() * 0.5 + 0.1; }
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.gold
+                    ? `rgba(184,149,42,${this.opacity})`
+                    : `rgba(100,100,100,${this.opacity * 0.3})`;
+                ctx.fill();
+            }
+        }
+        for (let i = 0; i < 120; i++) particles.push(new Particle());
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => { p.update(); p.draw(); });
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+    </script>
+
+</body>
+
+</html>
