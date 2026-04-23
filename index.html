@@ -572,13 +572,24 @@
         }
 
         .event-card .detail .icon {
-            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
             flex-shrink: 0;
             margin-top: 2px;
         }
 
+        .modern-icon {
+            width: 1.2rem;
+            height: 1.2rem;
+            stroke-width: 2px;
+        }
+
         .map-link {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             margin-top: 8px;
             padding: 12px 28px;
             color: var(--accent);
@@ -1372,17 +1383,22 @@
                 <p class="hijri-date">23 Dhul Qa'dah 1447 H</p>
                 <div class="divider"></div>
                 <div class="detail">
-                    <span class="icon">🕐</span>
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="modern-icon"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </span>
                     <span>11:00 AM onwards</span>
                 </div>
                 <div class="detail">
-                    <span class="icon">📍</span>
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="modern-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </span>
                     <span>Pathari Auditorium<br>Angadippuram, Malappuram<br>Kerala, India</span>
                 </div>
                 <div class="divider"></div>
                 <a href="https://maps.google.com/?q=Pathari+Auditorium+Angadippuram+Malappuram+Kerala" target="_blank"
                     rel="noopener" class="map-link">
-                    📌 Pathari Auditorium, Angadippuram
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="modern-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Pathari Auditorium, Angadippuram
                 </a>
             </div>
 
